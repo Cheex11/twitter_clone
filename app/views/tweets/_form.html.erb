@@ -1,0 +1,11 @@
+<%= form_for @tweet do |f| %>
+
+  <div class='form-group'>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </div>
+
+  <p ><%= f.submit :class=> 'btn btn-danger' %></p>
+
+<% end %>
