@@ -1,0 +1,18 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <%= link_to "Home", root_path, class: "navbar-text pull-left" %>
+      <% if current_user %>
+      <%= link_to "Write Tweet", new_tweet_path, id: "new_link", remote: true,
+       class: "navbar-text pull-left" %>
+      <% end %>
+      <div class="navbar-text pull-right">
+        <% if current_user %>
+          Logged in as <%= link_to current_user.name, user_path(current_user) %>  |
+          <%= link_to "Sign Out", logout_path %>
+        <% else %>
+          <%= link_to "Sign Up", signup_path %>  |
+          <%= link_to "Sign In", login_path %>
+        <% end %>
+    </div>
+  </div>
+</div>
