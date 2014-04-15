@@ -1,5 +1,5 @@
 <li>
-    "<%= tweet.text %>" | Posted by: <strong><%= tweet.user.name %></strong>
+    "<%= tweet.text %>" - posted by <strong><%= tweet.user.name %></strong>,
     <em><%= time_ago_in_words(tweet.created_at) + " ago" %>
     </em>
 </li>
