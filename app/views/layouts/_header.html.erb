@@ -2,7 +2,7 @@
     <div class="container">
       <%= link_to "Home", root_path, class: "navbar-text pull-left" %>
       <% if current_user %>
-      <%= link_to "Write Tweet", new_tweet_path, class: "navbar-text pull-left" %>
+      <%= link_to "Write Tweet", new_tweet_path, id: "new_link", remote: true, class: "navbar-text pull-left" %>
       <% end %>
       <div class="navbar-text pull-right">
         <% if current_user %>

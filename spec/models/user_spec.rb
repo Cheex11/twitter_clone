@@ -9,6 +9,7 @@ describe User do
   it { should validate_presence_of :email }
   it { should validate_uniqueness_of :email }
   it { should validate_presence_of :password_digest }
+  it { should have_many :tweets }
 
   it 'sends a welcome email' do
     user = User.new(name: "David", password: "1234", password_confirmation: "1234", email: "x@example.com")
